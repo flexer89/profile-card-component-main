@@ -1,0 +1,117 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --gray-blue: hsl(227, 10%, 46%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-color: var(--dark-cyan);
+    background-repeat: no-repeat;
+    background-position: 0vw -40vh, 50vw 40vh;
+    background-size: contain;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+.bg-pattern-card {
+    height: auto;
+    width: 100%;
+}
+
+.info-container {
+    background-color: #fff;
+}
+
+.victor {
+    display: block;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+span {
+    color: var(--gray-blue);
+    font-weight: 400;
+    padding: 5px;
+}
+
+.summary {
+    margin-top: -1.8rem;
+}
+
+.summary p {
+    font-size: 0.8rem;
+    color: var(--gray-blue);
+    padding: 0.5rem 0 1.1rem;
+}
+
+.stat-container {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.stat-container p {
+    color: var(--gray-blue);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+/* ----------------------------------Media Queries---------------------------- */
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        background-position: -50vw -200px, 50vw 120%;
+    }
+
+    .victor {
+        max-width: 84px;
+        height: auto;
+    }
+
+}
